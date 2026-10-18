@@ -41,82 +41,87 @@
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Mahasiswa</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #7bf0e5;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .container {
+        background-color: white;
+        max-width: 1200px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #e587c3;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ec9cc1;
+    }
+
+    .lulus {
+        color: green;
+        font-weight: bold;
+    }
+
+    .tidak-lulus {
+        color: red;
+        font-weight: bold;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    @media (max-width: 768px) {
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f5fa;
-            margin: 0;
-            padding: 40px;
+            padding: 15px;
         }
 
         .container {
-            background-color: white;
-            max-width: 1200px;
-            margin: auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px;
         }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table, th, td {
-            border: 1px solid #dee2e6;
-        }
-
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #eaf1ff;
-        }
-
-        .lulus {
-            color: green;
-            font-weight: bold;
-        }
-
-        .tidak-lulus {
-            color: red;
-            font-weight: bold;
+        .table-wrapper {
+            overflow-x: auto;
         }
 
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
+            align-items: flex-start;
+            gap: 15px;
+            flex-direction: column;
         }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            .table-wrapper {
-                overflow-x: auto;
-            }
-
-            .header {
-                align-items: flex-start;
-                gap: 15px;
-                flex-direction: column;
-            }
-        }
+    }
     </style>
 </head>
 
@@ -201,8 +206,7 @@
                                 } else {
                                     echo "Tidak Lulus";
                                 }
-                            ?>"
-                            class="btn btn-primary btn-sm">Lihat Detail</a>
+                            ?>" class="btn btn-primary btn-sm">Lihat Detail</a>
                         </td>
                     </tr>
 
@@ -213,4 +217,5 @@
         </div>
     </div>
 </body>
+
 </html>
